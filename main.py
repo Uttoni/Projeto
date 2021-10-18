@@ -1,22 +1,8 @@
-'''
-import numpy as np
-import cv2
-
-#LOAD YOLO
-net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
-classes = []
-classFile = "coco.names"
-with open(classFile, "r") as f:
-    classes = f.read().rstrip("\n").split("\n")
-
-layer_names = net.getLayerNames()
-'''
-
 import cv2
 import numpy as np
 
 # Load Yolo
-net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
+net = cv2.dnn.readNet("yolov4-tiny.weights", "yolo-tiny.cfg")
 classes = []
 with open("coco.names", "r") as f:
     classes = [line.strip() for line in f.readlines()]
@@ -45,7 +31,7 @@ for out in outs:
         scores = detection[5:]
         class_id = np.argmax(scores)
         confidence = scores[class_id]
-        if confidence > 0.99:
+        if confidence > 0.5:
             # Object detected
             center_x = int(detection[0] * width)
             center_y = int(detection[1] * height)
