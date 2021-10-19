@@ -7,10 +7,10 @@ with open("coco.names", "r") as f:
     classes = [line.strip() for line in f.readlines()]
 
 # Define uma cor aleatoria para cada classe
-colors = np.random.uniform(200, 255, size=(len(classes), 3))
+colors = np.random.uniform(0, 255, size=(len(classes), 3))
 
 # Carrega a Imagem
-img = cv2.imread("Images/doguinho.jpg")
+img = cv2.imread("Images/cerveja.jpeg")
 
 # Configura a escala da imagem, caso desejado mude o fx e fy
 img = cv2.resize(img, None, fx=1, fy=1)
