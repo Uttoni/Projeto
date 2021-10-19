@@ -80,7 +80,7 @@ for i in range(len(boxes)):
 
         # Monta o retangulo ao redor do objeto
         cv2.rectangle(img, (x, y), (x + w, y + h), color, 2)
-        cv2.putText(img, label, (x, y + 30), font, 2, color, 2)
+        cv2.putText(img, label, (x, y - 5), font, 2, color, 2)
 
 # Mostra a imagem depois de processada
 cv2.imshow("Image", img)
