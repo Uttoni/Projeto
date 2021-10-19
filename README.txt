@@ -17,3 +17,7 @@
 ## no Ubuntu:
 1.Logo após dar o git Clone entre na raiz pelo cmd e execute o comando abaixo:
     'wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights'
+
+
+Referencias:
+ sobre Blob: https://www.pyimagesearch.com/2017/11/06/deep-learning-opencvs-blobfromimage-works/
