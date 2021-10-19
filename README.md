@@ -12,14 +12,12 @@
   ```pip install opencv-python```
 - Numpy ->
   ```pip install numpy```
-- wget ->
-  ```pip install wget```
 
 ## Comandos:
 ### No Ubuntu
 - Logo após dar o git Clone entre na raiz pelo cmd e execute o comando abaixo
 - ```wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights```
-### No Windows:
+### No Windows ou em qualquer SO:
 - Copie e cole no navegador o link abaixo 
 - ``` https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights```
 - Cole o arquivo YoloV4.weights na pasta raiz do seu projeto clonado
