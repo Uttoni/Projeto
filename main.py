@@ -7,10 +7,10 @@ with open("coco.names", "r") as f:
     classes = [line.strip() for line in f.readlines()]
 
 # Define uma cor aleatoria para cada classe
-colors = np.random.uniform(0, 255, size=(len(classes), 3))
+colors = np.random.uniform(200, 255, size=(len(classes), 3))
 
 # Carrega a Imagem
-img = cv2.imread("Images/animais.jpg")
+img = cv2.imread("Images/doguinho.jpg")
 
 # Configura a escala da imagem, caso desejado mude o fx e fy
 img = cv2.resize(img, None, fx=1, fy=1)
@@ -78,9 +78,16 @@ for i in range(len(boxes)):
         label = str(classes[class_ids[i]] + confidence)
         color = colors[class_ids[i]]
 
-        # Monta o retangulo ao redor do objeto
+        # Monta a caixa delimitadora do objeto
+        # Retangulo preto para efeito de Borda
+        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 0), 4)
+        # Retangulo com a Cor Aleatoria
         cv2.rectangle(img, (x, y), (x + w, y + h), color, 2)
-        cv2.putText(img, label, (x, y - 5), font, 2, color, 2)
+        # Texto Preto para efeito de borda
+        cv2.putText(img, label, (x, y - 5), font, 2, (0, 0, 0), 4, cv2.LINE_AA)
+        # Texto com a cor Aleatoria
+        cv2.putText(img, label, (x, y - 5), font, 2, color, 2, cv2.LINE_AA)
+
 
 # Mostra a imagem depois de processada
 cv2.imshow("Image", img)
