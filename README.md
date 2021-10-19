@@ -29,3 +29,4 @@
 - sobre Blob: https://www.pyimagesearch.com/2017/11/06/deep-learning-opencvs-blobfromimage-works/
 - 1.https://www.youtube.com/watch?v=h56M5iUVgGs&t=782s
 - 2.https://pysource.com/2019/06/27/yolo-object-detection-using-opencv-with-python/
+- 3.https://www.section.io/engineering-education/introduction-to-yolo-algorithm-for-object-detection/
