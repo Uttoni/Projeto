@@ -1,7 +1,7 @@
 # Projeto de Laboratório de C209-Computação Gráfica Inatel
 
 ## Descrição:
-- O projeto realiza um processamento sobre a imagem e identifica 80 Objetos
+- O projeto realiza um processamento sobre a imagem e identifica até 80 Objetos
 - pip ou outro gerenciador de pacotes de sua preferencia.
 
 ## Requisitos:
